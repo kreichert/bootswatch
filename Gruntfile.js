@@ -58,6 +58,13 @@ module.exports = function (grunt) {
           normal: '@font-size-base: 15px;'
         }
       },
+      default:{
+        variations:{
+          xSmall: '@font-size-base: 10px;',
+          small: '@font-size-base: 12px;',
+          normal: '@font-size-base: 14px;'
+        }
+      },
       flatly:{
         variations:{
           xSmall: '@font-size-base: 11px;',
