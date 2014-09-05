@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
@@ -8,6 +9,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     builddir: '.',
+    buildtheme: '',
     banner: '/*!\n' +
             ' * <%= pkg.name %> v<%= pkg.version %>\n' +
             ' * Homepage: <%= pkg.homepage %>\n' +
@@ -86,7 +88,21 @@ module.exports = function (grunt) {
           normal: '@font-size-base: 14px;'
         }
       },
+      paper:{
+        variations:{
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
+        }
+      },
       readable:{
+        variations:{
+          tiny: '@font-size-base: 10px;',
+          small: '@font-size-base: 12px;',
+          normal: '@font-size-base: 14px;'
+        }
+      },
+      sandstone:{
         variations:{
           tiny: '@font-size-base: 10px;',
           small: '@font-size-base: 12px;',
@@ -137,11 +153,8 @@ module.exports = function (grunt) {
       }
     },
     clean: {
-      preBuild: {
-        src: ['dist']
-      },
       build: {
-        src: ['*/build*.less', '!global/build.less']
+        src: ['*/build.less', '!global/build.less']
       }
     },
     concat: {
@@ -161,6 +174,31 @@ module.exports = function (grunt) {
           compress: false
         },
         files: {}
+      }
+    },
+    watch: {
+      files: ['*/variables.less', '*/bootswatch.less', '*/index.html'],
+      tasks: 'build',
+      options: {
+        livereload: true,
+        nospawn: true
+      }
+    },
+    connect: {
+      base: {
+        options: {
+          port: 3000,
+          livereload: true,
+          open: true
+        }
+      },
+      keepalive: {
+        options: {
+          port: 3000,
+          livereload: true,
+          keepalive: true,
+          open: true
+        }
       }
     }
   });
@@ -212,7 +250,6 @@ module.exports = function (grunt) {
 
   grunt.registerMultiTask('swatch', 'build a theme', function() {
     var t = this.target;
-
     var variations = this.data.variations;
     grunt.config.set("variations",variations);
     if (variations !== null && variations !== undefined){
@@ -222,10 +259,15 @@ module.exports = function (grunt) {
     }else{
       grunt.task.run('build:'+t);
     }
-
   });
 
-  grunt.registerTask('default', 'build a theme', function() {
-    grunt.task.run(['clean:preBuild','swatch']);
+  grunt.event.on('watch', function(action, filepath) {
+    var path = require('path');
+    var theme = path.dirname(filepath);
+    grunt.config('buildtheme', theme);
   });
+
+  grunt.registerTask('server', 'connect:keepalive')
+
+  grunt.registerTask('default', ['connect:base', 'watch']);
 };
