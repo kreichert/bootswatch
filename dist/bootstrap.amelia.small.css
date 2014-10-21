@@ -890,7 +890,7 @@ html {
 }
 body {
   font-family: "Cabin", Arial, sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.42857143;
   color: #ffffff;
   background-color: #108a93;
@@ -954,8 +954,8 @@ img {
   border-radius: 50%;
 }
 hr {
-  margin-top: 17px;
-  margin-bottom: 17px;
+  margin-top: 14px;
+  margin-bottom: 14px;
   border: 0;
   border-top: 1px solid #0d747c;
 }
@@ -1029,8 +1029,8 @@ h2,
 .h2,
 h3,
 .h3 {
-  margin-top: 17px;
-  margin-bottom: 8.5px;
+  margin-top: 14px;
+  margin-bottom: 7px;
 }
 h1 small,
 .h1 small,
@@ -1052,8 +1052,8 @@ h5,
 .h5,
 h6,
 .h6 {
-  margin-top: 8.5px;
-  margin-bottom: 8.5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
 h4 small,
 .h4 small,
@@ -1071,45 +1071,45 @@ h6 .small,
 }
 h1,
 .h1 {
-  font-size: 31px;
+  font-size: 26px;
 }
 h2,
 .h2 {
-  font-size: 25px;
+  font-size: 21px;
 }
 h3,
 .h3 {
-  font-size: 21px;
+  font-size: 17px;
 }
 h4,
 .h4 {
-  font-size: 15px;
+  font-size: 13px;
 }
 h5,
 .h5 {
-  font-size: 12px;
+  font-size: 10px;
 }
 h6,
 .h6 {
-  font-size: 11px;
+  font-size: 9px;
 }
 p {
-  margin: 0 0 8.5px;
+  margin: 0 0 7px;
 }
 .lead {
-  margin-bottom: 17px;
-  font-size: 13px;
+  margin-bottom: 14px;
+  font-size: 11px;
   font-weight: 300;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
   .lead {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 small,
 .small {
-  font-size: 91%;
+  font-size: 90%;
 }
 cite {
   font-style: normal;
@@ -1208,14 +1208,14 @@ a.bg-danger:hover {
   background-color: #b25818;
 }
 .page-header {
-  padding-bottom: 7.5px;
-  margin: 34px 0 17px;
+  padding-bottom: 6px;
+  margin: 28px 0 14px;
   border-bottom: 1px solid #0d747c;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 8.5px;
+  margin-bottom: 7px;
 }
 ul ul,
 ol ul,
@@ -1239,7 +1239,7 @@ ol ol {
 }
 dl {
   margin-top: 0;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
 }
 dt,
 dd {
@@ -1275,9 +1275,9 @@ abbr[data-original-title] {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 8.5px 17px;
-  margin: 0 0 17px;
-  font-size: 15px;
+  padding: 7px 14px;
+  margin: 0 0 14px;
+  font-size: 12.5px;
   border-left: 5px solid rgba(255, 255, 255, 0.6);
 }
 blockquote p:last-child,
@@ -1327,7 +1327,7 @@ blockquote:after {
   content: "";
 }
 address {
-  margin-bottom: 17px;
+  margin-bottom: 14px;
   font-style: normal;
   line-height: 1.42857143;
 }
@@ -1359,9 +1359,9 @@ kbd kbd {
 }
 pre {
   display: block;
-  padding: 8px;
-  margin: 0 0 8.5px;
-  font-size: 11px;
+  padding: 6.5px;
+  margin: 0 0 7px;
+  font-size: 9px;
   line-height: 1.42857143;
   word-break: break-all;
   word-wrap: break-word;
@@ -2058,7 +2058,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -2239,7 +2239,7 @@ table th[class*="col-"] {
 @media screen and (max-width: 767px) {
   .table-responsive {
     width: 100%;
-    margin-bottom: 12.75px;
+    margin-bottom: 10.5px;
     overflow-y: hidden;
     overflow-x: auto;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -2293,8 +2293,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 17px;
-  font-size: 18px;
+  margin-bottom: 14px;
+  font-size: 15px;
   line-height: inherit;
   color: #ffffff;
   border: 0;
@@ -2338,16 +2338,16 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 9px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.42857143;
   color: #444444;
 }
 .form-control {
   display: block;
   width: 100%;
-  height: 35px;
+  height: 32px;
   padding: 8px 12px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.42857143;
   color: #444444;
   background-color: #ffffff;
@@ -2393,20 +2393,20 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  line-height: 35px;
+  line-height: 32px;
   line-height: 1.42857143 \0;
 }
 input[type="date"].input-sm,
 input[type="time"].input-sm,
 input[type="datetime-local"].input-sm,
 input[type="month"].input-sm {
-  line-height: 28px;
+  line-height: 25px;
 }
 input[type="date"].input-lg,
 input[type="time"].input-lg,
 input[type="datetime-local"].input-lg,
 input[type="month"].input-lg {
-  line-height: 50px;
+  line-height: 48px;
 }
 .form-group {
   margin-bottom: 15px;
@@ -2415,7 +2415,7 @@ input[type="month"].input-lg {
 .checkbox {
   position: relative;
   display: block;
-  min-height: 17px;
+  min-height: 14px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -2484,15 +2484,15 @@ fieldset[disabled] .checkbox label {
 }
 .input-sm,
 .form-horizontal .form-group-sm .form-control {
-  height: 28px;
+  height: 25px;
   padding: 5px 10px;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.5;
   border-radius: 3px;
 }
 select.input-sm {
-  height: 28px;
-  line-height: 28px;
+  height: 25px;
+  line-height: 25px;
 }
 textarea.input-sm,
 select[multiple].input-sm {
@@ -2500,15 +2500,15 @@ select[multiple].input-sm {
 }
 .input-lg,
 .form-horizontal .form-group-lg .form-control {
-  height: 50px;
+  height: 48px;
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.33;
   border-radius: 6px;
 }
 select.input-lg {
-  height: 50px;
-  line-height: 50px;
+  height: 48px;
+  line-height: 48px;
 }
 textarea.input-lg,
 select[multiple].input-lg {
@@ -2518,28 +2518,28 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 43.75px;
+  padding-right: 40px;
 }
 .form-control-feedback {
   position: absolute;
-  top: 22px;
+  top: 19px;
   right: 0;
   z-index: 2;
   display: block;
-  width: 35px;
-  height: 35px;
-  line-height: 35px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
   text-align: center;
 }
 .input-lg + .form-control-feedback {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
 }
 .input-sm + .form-control-feedback {
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
 }
 .has-success .help-block,
 .has-success .control-label,
@@ -2685,7 +2685,7 @@ select[multiple].input-lg {
 }
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 26px;
+  min-height: 23px;
 }
 .form-horizontal .form-group {
   margin-left: -15px;
@@ -2723,7 +2723,7 @@ select[multiple].input-lg {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 8px 12px;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.42857143;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -3042,21 +3042,21 @@ fieldset[disabled] .btn-link:focus {
 .btn-lg,
 .btn-group-lg > .btn {
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.33;
   border-radius: 6px;
 }
 .btn-sm,
 .btn-group-sm > .btn {
   padding: 5px 10px;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.5;
   border-radius: 3px;
 }
 .btn-xs,
 .btn-group-xs > .btn {
   padding: 1px 5px;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.5;
   border-radius: 3px;
 }
@@ -3128,7 +3128,7 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 12px;
+  font-size: 10px;
   text-align: left;
   background-color: #ffffff;
   border: 1px solid #cccccc;
@@ -3144,7 +3144,7 @@ tbody.collapse.in {
 }
 .dropdown-menu .divider {
   height: 1px;
-  margin: 7.5px 0;
+  margin: 6px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -3201,7 +3201,7 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.42857143;
   color: #dddddd;
   white-space: nowrap;
@@ -3431,17 +3431,17 @@ tbody.collapse.in {
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  height: 50px;
+  height: 48px;
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 1.33;
   border-radius: 6px;
 }
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
 select.input-group-lg > .input-group-btn > .btn {
-  height: 50px;
-  line-height: 50px;
+  height: 48px;
+  line-height: 48px;
 }
 textarea.input-group-lg > .form-control,
 textarea.input-group-lg > .input-group-addon,
@@ -3454,17 +3454,17 @@ select[multiple].input-group-lg > .input-group-btn > .btn {
 .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
-  height: 28px;
+  height: 25px;
   padding: 5px 10px;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.5;
   border-radius: 3px;
 }
 select.input-group-sm > .form-control,
 select.input-group-sm > .input-group-addon,
 select.input-group-sm > .input-group-btn > .btn {
-  height: 28px;
-  line-height: 28px;
+  height: 25px;
+  line-height: 25px;
 }
 textarea.input-group-sm > .form-control,
 textarea.input-group-sm > .input-group-addon,
@@ -3492,7 +3492,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-addon {
   padding: 8px 12px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: normal;
   line-height: 1;
   color: #444444;
@@ -3503,12 +3503,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .input-group-addon.input-sm {
   padding: 5px 10px;
-  font-size: 11px;
+  font-size: 9px;
   border-radius: 3px;
 }
 .input-group-addon.input-lg {
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 13px;
   border-radius: 6px;
 }
 .input-group-addon input[type="radio"],
@@ -3602,7 +3602,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav .nav-divider {
   height: 1px;
-  margin: 7.5px 0;
+  margin: 6px 0;
   overflow: hidden;
   background-color: #e5e5e5;
 }
@@ -3760,7 +3760,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -3867,9 +3867,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 16.5px 15px;
-  font-size: 15px;
-  line-height: 17px;
+  padding: 18px 15px;
+  font-size: 13px;
+  line-height: 14px;
   height: 50px;
 }
 .navbar-brand:hover,
@@ -3912,12 +3912,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 8.25px -15px;
+  margin: 9px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
   padding-bottom: 10px;
-  line-height: 17px;
+  line-height: 14px;
 }
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
@@ -3934,7 +3934,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding: 5px 15px 5px 25px;
   }
   .navbar-nav .open .dropdown-menu > li > a {
-    line-height: 17px;
+    line-height: 14px;
   }
   .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -3950,8 +3950,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 16.5px;
-    padding-bottom: 16.5px;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
@@ -3973,8 +3973,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 7.5px;
-  margin-bottom: 7.5px;
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4053,20 +4053,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 7.5px;
-  margin-bottom: 7.5px;
+  margin-top: 9px;
+  margin-bottom: 9px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 11px;
-  margin-bottom: 11px;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
 }
 .navbar-btn.btn-xs {
   margin-top: 14px;
   margin-bottom: 14px;
 }
 .navbar-text {
-  margin-top: 16.5px;
-  margin-bottom: 16.5px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
 @media (min-width: 768px) {
   .navbar-text {
@@ -4278,7 +4278,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
   list-style: none;
   background-color: #13a0aa;
   border-radius: 4px;
@@ -4297,7 +4297,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 17px 0;
+  margin: 14px 0;
   border-radius: 4px;
 }
 .pagination > li {
@@ -4360,7 +4360,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 14px 16px;
-  font-size: 15px;
+  font-size: 13px;
 }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
@@ -4375,7 +4375,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination-sm > li > a,
 .pagination-sm > li > span {
   padding: 5px 10px;
-  font-size: 11px;
+  font-size: 9px;
 }
 .pagination-sm > li:first-child > a,
 .pagination-sm > li:first-child > span {
@@ -4389,7 +4389,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .pager {
   padding-left: 0;
-  margin: 17px 0;
+  margin: 14px 0;
   list-style: none;
   text-align: center;
 }
@@ -4496,7 +4496,7 @@ a.label:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 11px;
+  font-size: 9px;
   font-weight: bold;
   color: #ffffff;
   line-height: 1;
@@ -4543,7 +4543,7 @@ a.list-group-item.active > .badge,
 }
 .jumbotron p {
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 200;
 }
 .jumbotron > hr {
@@ -4566,13 +4566,13 @@ a.list-group-item.active > .badge,
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 54px;
+    font-size: 45px;
   }
 }
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
   line-height: 1.42857143;
   background-color: #0d747c;
   border: 1px solid #0d747c;
@@ -4597,7 +4597,7 @@ a.thumbnail.active {
 }
 .alert {
   padding: 15px;
-  margin-bottom: 17px;
+  margin-bottom: 14px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -4688,8 +4688,8 @@ a.thumbnail.active {
 }
 .progress {
   overflow: hidden;
-  height: 17px;
-  margin-bottom: 17px;
+  height: 14px;
+  margin-bottom: 14px;
   background-color: #0d747c;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -4699,8 +4699,8 @@ a.thumbnail.active {
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 11px;
-  line-height: 17px;
+  font-size: 9px;
+  line-height: 14px;
   color: #ffffff;
   text-align: center;
   background-color: #ad1d28;
@@ -4970,7 +4970,7 @@ a.list-group-item-danger.active:focus {
   line-height: 1.3;
 }
 .panel {
-  margin-bottom: 17px;
+  margin-bottom: 14px;
   background-color: #13a0aa;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -4992,7 +4992,7 @@ a.list-group-item-danger.active:focus {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 12px;
   color: inherit;
 }
 .panel-title > a {
@@ -5148,7 +5148,7 @@ a.list-group-item-danger.active:focus {
   margin-bottom: 0;
 }
 .panel-group {
-  margin-bottom: 17px;
+  margin-bottom: 14px;
 }
 .panel-group .panel {
   margin-bottom: 0;
@@ -5326,7 +5326,7 @@ a.list-group-item-danger.active:focus {
 }
 .close {
   float: right;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1;
   color: #ffffff;
@@ -5474,7 +5474,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-size: 11px;
+  font-size: 9px;
   line-height: 1.4;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -5600,7 +5600,7 @@ button.close {
 .popover-title {
   margin: 0;
   padding: 8px 14px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: normal;
   line-height: 18px;
   background-color: #11939c;

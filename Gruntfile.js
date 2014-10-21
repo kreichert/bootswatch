@@ -20,72 +20,72 @@ module.exports = function (grunt) {
     swatch: {
       amelia:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       cerulean:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       cosmo:{
         variations:{
-          tiny: '@font-size-base: 11px;',
-          small: '@font-size-base: 13px;',
-          normal: '@font-size-base: 15px;'
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
         }
       },
       custom:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       cyborg:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       darkly:{
         variations:{
-          tiny: '@font-size-base: 11px;',
-          small: '@font-size-base: 13px;',
-          normal: '@font-size-base: 15px;'
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
         }
       },
       default:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       flatly:{
         variations:{
-          tiny: '@font-size-base: 11px;',
-          small: '@font-size-base: 13px;',
-          normal: '@font-size-base: 15px;'
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
         }
       },
       journal:{
         variations:{
-          tiny: '@font-size-base: 11px;',
-          small: '@font-size-base: 13px;',
-          normal: '@font-size-base: 15px;'
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
         }
       },
       lumen:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       paper:{
@@ -97,58 +97,58 @@ module.exports = function (grunt) {
       },
       readable:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       sandstone:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       simplex:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       slate:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       spacelab:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       superhero:{
         variations:{
-          tiny: '@font-size-base: 11px;',
-          small: '@font-size-base: 13px;',
-          normal: '@font-size-base: 15px;'
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
         }
       },
       united:{
         variations:{
-          tiny: '@font-size-base: 10px;',
-          small: '@font-size-base: 12px;',
-          normal: '@font-size-base: 14px;'
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
         }
       },
       yeti:{
         variations:{
-          tiny: '@font-size-base: 11px;',
-          small: '@font-size-base: 13px;',
-          normal: '@font-size-base: 15px;'
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
         }
       }
     },
