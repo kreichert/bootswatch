@@ -22,10 +22,139 @@ module.exports = function (grunt) {
             ' * Based on Bootstrap\n' +
             '*/\n',
     swatch: {
-      amelia:{}, cerulean:{}, cosmo:{}, cyborg:{}, darkly:{},
-      flatly:{}, journal:{}, lumen:{}, paper:{}, readable:{},
-      sandstone:{}, simplex:{}, slate:{}, spacelab:{}, superhero:{},
-      united:{}, yeti:{}, custom:{}
+      amelia:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      cerulean:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      cosmo:{
+        variations:{
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
+        }
+      },
+      custom:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      cyborg:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      darkly:{
+        variations:{
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
+        }
+      },
+      default:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      flatly:{
+        variations:{
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
+        }
+      },
+      journal:{
+        variations:{
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
+        }
+      },
+      lumen:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      paper:{
+        variations:{
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
+        }
+      },
+      readable:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      sandstone:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      simplex:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      slate:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      spacelab:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      superhero:{
+        variations:{
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
+        }
+      },
+      united:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
+      },
+      yeti:{
+        variations:{
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
+        }
+      }
     },
     clean: {
       build: {
@@ -92,19 +221,24 @@ module.exports = function (grunt) {
     var theme = theme == undefined ? grunt.config('buildtheme') : theme;
     var compress = compress == undefined ? true : compress;
 
-    var isValidTheme = grunt.file.exists(theme, 'variables.less') && grunt.file.exists(theme, 'bootswatch.less');
- 
-     // cancel the build (without failing) if this directory is not a valid theme
-    if (!isValidTheme) {
-      return;
-    }
 
+    var variation = "";
     var concatSrc;
     var concatDest;
     var lessDest;
     var lessSrc;
     var files = {};
     var dist = {};
+    if (theme.indexOf("_" !== -1)){
+      chunks = theme.split("_");
+      theme = chunks[0];
+      variation = (chunks[1] == undefined) ? "normal": chunks[1];
+    }
+    var isValidTheme = grunt.file.exists(theme, 'variables.less') && grunt.file.exists(theme, 'bootswatch.less');
+    // cancel the build (without failing) if this directory is not a valid theme
+    if (!isValidTheme) {
+      return;
+    }
     concatSrc = 'global/build.less';
     concatDest = theme + '/build.less';
     lessDest = '<%=builddir%>/' + theme + '/bootstrap.css';
@@ -116,8 +250,15 @@ module.exports = function (grunt) {
     grunt.config('less.dist.files', files);
     grunt.config('less.dist.options.compress', false);
 
+    if(undefined !== grunt.config.get('variations')){
+      grunt.config('concat.options.footer', grunt.config.get('variations')[variation]);
+    }
+
+    // grunt.task.run(['concat', 'less:dist', 'clean:build',
+    //   compress ? 'compress:'+lessDest+':'+'<%=builddir%>/dist/bootstrap.'+theme+"."+variation+'.min.css':'none']);
+
     grunt.task.run(['concat', 'less:dist', 'prefix:' + lessDest, 'clean:build',
-      compress ? 'compress:'+lessDest+':'+'<%=builddir%>/' + theme + '/bootstrap.min.css':'none']);
+      compress ? 'compress:'+lessDest+':'+'<%=builddir%>/dist/bootstrap.' + theme +"."+variation+ '.min.css':'none']);
   });
 
 grunt.registerTask('build_scss', 'build a regular theme from scss', function(theme, compress) {
@@ -149,11 +290,11 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
     grunt.config('sass.dist.options.style', 'expanded');
     grunt.config('sass.dist.options.precision', 8);
     grunt.config('sass.dist.options.unix-newlines', true);
- 
+
     grunt.task.run(['concat', 'sass:dist', 'prefix:' + scssDest, 'clean:build',
         compress ? 'compress_scss:' + scssDest + ':' + '<%=builddir%>/' + theme + '/bootstrap.min.css' : 'none']);
   });
-  
+
   grunt.registerTask('prefix', 'autoprefix a generic css', function(fileSrc) {
     grunt.config('autoprefixer.dist.src', fileSrc);
     grunt.task.run('autoprefixer');
@@ -179,8 +320,21 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
 
   grunt.registerMultiTask('swatch', 'build a theme', function() {
     var t = this.target;
-    grunt.task.run('build:'+t);
+    var variations = this.data.variations;
+    grunt.config.set("variations",variations);
+    if (variations !== null && variations !== undefined){
+      for(var variation in variations){
+        grunt.task.run('build:'+t+"_"+variation);
+      }
+    }else{
+      grunt.task.run('build:'+t);
+    }
   });
+
+  // grunt.registerMultiTask('swatch', 'build a theme', function() {
+  //   var t = this.target;
+  //   grunt.task.run('build:'+t);
+  // });
 
   grunt.registerTask('swatch_scss', 'build a theme from scss ', function (theme) {
     var t = theme;
@@ -223,7 +377,7 @@ grunt.registerTask('build_scss', 'build a regular theme from scss', function(the
                 .replace(/(\.(?![0-9])([\w\-]+);)/g, '@extend $1')
                 // 7.  replace string literals
                 .replace(/~"(.*)"/g, '#{"$1"}')
-                // 8.  replace interpolation  ${var} > #{$var} 
+                // 8.  replace interpolation  ${var} > #{$var}
                 .replace(/\$\{(.*)\}/g, '#{$$$1}')
                 // 9.  replace spin to adjust-hue (function name diff)
                 .replace(/spin\(/g, 'adjust-hue(')
