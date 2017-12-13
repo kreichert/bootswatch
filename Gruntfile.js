@@ -150,6 +150,13 @@ module.exports = function (grunt) {
           small: '@font-size-base: 11px;',
           normal: '@font-size-base: 13px;'
         }
+      },
+      hacker:{
+        variations:{
+          tiny: '@font-size-base: 8px;',
+          small: '@font-size-base: 10px;',
+          normal: '@font-size-base: 12px;'
+        }
       }
     },
     clean: {
