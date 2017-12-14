@@ -153,9 +153,9 @@ module.exports = function (grunt) {
       },
       hacker:{
         variations:{
-          tiny: '@font-size-base: 8px;',
-          small: '@font-size-base: 10px;',
-          normal: '@font-size-base: 12px;'
+          tiny: '@font-size-base: 9px;',
+          small: '@font-size-base: 11px;',
+          normal: '@font-size-base: 13px;'
         }
       }
     },
