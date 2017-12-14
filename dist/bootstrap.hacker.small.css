@@ -5172,7 +5172,7 @@ a.list-group-item-danger.active:focus {
   border-color: #3c3c3c;
 }
 .panel-default > .panel-heading {
-  color: #222222;
+  color: #888888;
   background-color: #080808;
   border-color: #3c3c3c;
 }
@@ -5181,7 +5181,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading .badge {
   color: #080808;
-  background-color: #222222;
+  background-color: #888888;
 }
 .panel-default > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #3c3c3c;
